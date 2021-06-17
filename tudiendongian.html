@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button type="button" onclick="search()">Searching</button>
+<script>
+    let tiengviet = ['xin chào', 'tạm biệt', 'làm ơn', 'cảm ơn'];
+    let tienganh = ['Hello', 'Bye', 'Please!', 'Thank u'];
+    let a = document.getElementById("nhap").value;
+
+    function search() {
+        let a = document.getElementById("nhap").value;
+        let index = -1;
+        for (let i = 0; i < tienganh.length; i++) {
+            if (a == tienganh[i]) {
+                index = i
+                break;
+            }
+        }
+        if (index == -1){
+            alert( 'khong tim thay')
+        }else {
+        alert(tiengviet[index])}
+    }
+
+</script>
+</body>
+</html>
